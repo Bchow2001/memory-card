@@ -1,11 +1,10 @@
 import { useState } from "react";
-import DisplayCards from "./components/DisplayCards";
+import { DisplayCards } from "./components/DisplayCards";
+import GameLogic from "./components/GameLogic";
 import "./App.css";
-import FetchImage from "./components/FetchImage";
 
 function App() {
-	const [count, setCount] = useState(0);
-	return <DisplayCards />;
+	return <GameLogic />;
 }
 
 export default App;
