@@ -11,12 +11,11 @@ async function FetchCards() {
 		{ name: "Skyler White", src: "" },
 		{ name: "Kim Wexler", src: "" },
 	];
+	const url =
+		"https://api.giphy.com/v1/gifs/search?api_key=g4P03xginRwZg4KVLYE0bmmzNiJJSNza&q=";
+	const limit = "&limit=1";
 	return Promise.all(
 		characters.map((item) => {
-			const url =
-				"https://api.giphy.com/v1/gifs/search?api_key=g4P03xginRwZg4KVLYE0bmmzNiJJSNza&q=";
-
-			const limit = "&limit=1";
 			let replaced = item.name.replace(/\s/g, "+");
 			return fetch(url + replaced + limit)
 				.then((response) => response.json())
