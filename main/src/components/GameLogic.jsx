@@ -17,6 +17,7 @@ function GameLogic() {
 	function checkLoss(guess) {
 		if (guesses.includes(guess)) {
 			alert("YOU LOSE");
+			setGuesses([]);
 		} else {
 			let newGuess = guesses;
 			newGuess.push(guess);
@@ -24,6 +25,7 @@ function GameLogic() {
 		}
 		if (guesses.length === 10) {
 			alert("YOU WIN");
+			setGuesses([]);
 		}
 	}
 
